@@ -1,0 +1,76 @@
+{
+   "placeholderImages": [
+      {
+         "id": "hero_investment_sm",
+         "description": "Hero image used on the investment section",
+         "imageUrl": "/investment-hero.jpeg",
+         "imageHint": "investment hero"
+      },
+      {
+         "id": "about-summary-image",
+         "description": "Hero animated GIF used on the about/summary section",
+         "imageUrl": "/GIFfinal_1VVV.gif",
+         "imageHint": "hero animated gif"
+      },
+      {
+         "id": "crypto-investment-sm",
+         "description": "Crypto investment visual",
+         "imageUrl": "/crypto-investment-sm.jpg",
+         "imageHint": "crypto"
+      },
+      {
+         "id": "forex-investment-sm",
+         "description": "Forex investment visual",
+         "imageUrl": "/forex-investment-sm.jpg",
+         "imageHint": "forex"
+      },
+      {
+         "id": "investment-consultancy-sm",
+         "description": "Investment consultancy visual",
+         "imageUrl": "/investment-consultancy-sm.jpg",
+         "imageHint": "consultancy"
+      },
+      {
+         "id": "hero_light",
+         "description": "Hero light image",
+         "imageUrl": "/hero_light.png",
+         "imageHint": "hero"
+      },
+      {
+         "id": "stats_bg_light",
+         "description": "Background used for stats/design",
+         "imageUrl": "/stats_bg_light.png",
+         "imageHint": "background"
+      },
+      {
+         "id": "file_svg",
+         "description": "Generic file icon SVG",
+         "imageUrl": "/file.svg",
+         "imageHint": "icon"
+      },
+      {
+         "id": "globe_svg",
+         "description": "Globe SVG",
+         "imageUrl": "/globe.svg",
+         "imageHint": "icon"
+      },
+      {
+         "id": "next_svg",
+         "description": "Next.js logo SVG",
+         "imageUrl": "/next.svg",
+         "imageHint": "logo"
+      },
+      {
+         "id": "vercel_svg",
+         "description": "Vercel logo SVG",
+         "imageUrl": "/vercel.svg",
+         "imageHint": "logo"
+      },
+      {
+         "id": "window_svg",
+         "description": "Window icon SVG",
+         "imageUrl": "/window.svg",
+         "imageHint": "icon"
+      }
+   ]
+}
