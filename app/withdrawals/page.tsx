@@ -12,7 +12,7 @@ const METHODS = [
   { value: 'bitcoin', label: 'Bitcoin (BTC)' },
   { value: 'ethereum', label: 'Ethereum (ETH)' },
   { value: 'usdt', label: 'USDT (TRC-20)' },
-  { value: 'bank_transfer', label: 'Bank Transfer' },
+  { value: 'usdt2', label: 'USDT (ETH-20)'}
 ]
 
 export default function WithdrawalsPage() {

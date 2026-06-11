@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" role="img" aria-label="PipsTrust AG logo">
+  <rect width="80" height="80" rx="14" fill="#064e3b"/>
+  <path d="M20 22h40v12H20z" fill="#10b981"/>
+  <circle cx="40" cy="46" r="16" fill="#0f766e"/>
+  <text x="40" y="52" text-anchor="middle" font-family="Inter, sans-serif" font-size="24" fill="#fff" font-weight="700">AG</text>
+</svg>

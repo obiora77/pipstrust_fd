@@ -17,7 +17,6 @@ const METHODS = [
   { value: 'bitcoin', label: 'Bitcoin (BTC)' },
   { value: 'ethereum', label: 'Ethereum (ETH)' },
   { value: 'usdt', label: 'USDT (TRC-20)' },
-  { value: 'bank_transfer', label: 'Bank Transfer' },
 ]
 
 export default function DepositsPage() {
@@ -159,7 +158,7 @@ export default function DepositsPage() {
               </div>
 
               {/* Tx hash */}
-              {method !== 'bank_transfer' && (
+              {(
                 <div>
                   <label className="block text-sm font-medium text-dark-200 mb-2">Transaction Hash</label>
                   <input value={txHash} onChange={e => setTxHash(e.target.value)} placeholder="0x..." className="input-gold w-full font-mono text-sm" />

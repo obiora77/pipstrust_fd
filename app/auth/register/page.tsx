@@ -96,12 +96,12 @@ export default function RegisterPage() {
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium text-dark-200 mb-2">First Name</label>
-                <input {...register('first_name')} placeholder="John" className="input-gold w-full" />
+                <input {...register('first_name')} placeholder="Anthony" className="input-gold w-full" />
                 {errors.first_name && <p className="text-red-400 text-xs mt-1">{errors.first_name.message}</p>}
               </div>
               <div>
                 <label className="block text-sm font-medium text-dark-200 mb-2">Last Name</label>
-                <input {...register('last_name')} placeholder="Doe" className="input-gold w-full" />
+                <input {...register('last_name')} placeholder="Rice" className="input-gold w-full" />
                 {errors.last_name && <p className="text-red-400 text-xs mt-1">{errors.last_name.message}</p>}
               </div>
             </div>

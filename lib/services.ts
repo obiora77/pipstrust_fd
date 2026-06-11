@@ -20,10 +20,7 @@ export interface UserProfile {
   bitcoin_address?: string
   ethereum_address?: string
   usdt_address?: string
-  bank_name?: string
-  bank_account_number?: string
-  bank_account_name?: string
-  wallet_balance: string
+  wallet_balance: number
   total_deposited: string
   total_withdrawn: string
   total_earned: string
@@ -33,9 +30,9 @@ export interface InvestmentPlan {
   id: string
   name: string
   description: string
-  min_amount: string
-  max_amount?: string
-  roi_percentage: string
+  min_amount: number
+  max_amount?: number
+  roi_percentage: number
   duration: number
   duration_unit: 'days' | 'weeks' | 'months'
   is_active: boolean
@@ -58,9 +55,9 @@ export interface Deposit {
 export interface Investment {
   id: string
   plan: InvestmentPlan
-  amount: string
-  roi_percentage: string
-  expected_return: string
+  amount: number
+  roi_percentage: number
+  expected_return: number
   actual_return: string
   status: 'active' | 'completed' | 'cancelled'
   starts_at: string
@@ -75,9 +72,6 @@ export interface Withdrawal {
   amount: string
   method: string
   payout_address?: string
-  bank_name?: string
-  bank_account_number?: string
-  bank_account_name?: string
   status: 'pending' | 'otp_verified' | 'processing' | 'completed' | 'rejected'
   admin_note?: string
   processed_at?: string
@@ -104,10 +98,10 @@ export interface Notification {
 }
 
 export interface DashboardSummary {
-  wallet_balance: string
-  total_deposited: string
-  total_withdrawn: string
-  total_earned: string
+  wallet_balance: number
+  total_deposited: number
+  total_withdrawn: number
+  total_earned: number
   active_investments: number
   completed_investments: number
   pending_deposits: number
@@ -164,7 +158,7 @@ export const investmentService = {
   getInvestment: (id: string) =>
     api.get<ApiResponse<Investment>>(`/investments/${id}/`),
 
-  createInvestment: (data: { plan_id: string; deposit_id: string }) =>
+  createInvestment: (data: { plan_id: string; amount: string | number }) =>
     api.post<ApiResponse<Investment>>('/investments/create/', data),
 
   getDeposits: (params?: { status?: string }) =>

@@ -3,6 +3,7 @@
 import { ArrowRight, ChevronDown, Star } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 import { PlaceHolderImages } from '@/lib/placeholder-images'
 
 const stats = [
@@ -12,7 +13,11 @@ const stats = [
   { label: 'Countries', value: '40+' },
 ]
 
-function HeroSection() {
+interface HeroSectionProps {
+  isPreloaderDone?: boolean
+}
+
+function HeroSection({ isPreloaderDone = false }: HeroSectionProps) {
   const heroImage = PlaceHolderImages.find((p) => p.id === "hero_investment_sm");
   return (
     <section className="pt-32 pb-20 px-6 relative overflow-hidden">
@@ -21,6 +26,7 @@ function HeroSection() {
           src={heroImage.imageUrl}
           alt={heroImage.description}
           fill
+          loading="eager"
           className="absolute inset-0 pointer-events-none brightness-50"
         />
       )}
@@ -30,7 +36,12 @@ function HeroSection() {
         <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-gold-500/3 rounded-full blur-3xl" />
       </div>
 
-        <div className="max-w-4xl mx-auto text-center relative" data-aos="zoom-out-up">
+        <motion.div
+           className="max-w-4xl mx-auto text-center relative" 
+           initial={{ opacity: 0, y: 50 }}
+           animate={isPreloaderDone ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+           transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
+        >
           <div className="inline-flex items-center gap-2 bg-gold-500/10 border border-gold-500/20 rounded-full px-4 py-1.5 text-gold-400 text-sm font-medium mb-8">
             <Star size={12} className="fill-gold-400" />
             Trusted by 12,000+ investors worldwide
@@ -57,7 +68,7 @@ function HeroSection() {
               <ChevronDown size={18} />
             </a>
           </div>
-        </div>
+        </motion.div>
 
         {/* Stats */}
         <div className="max-w-4xl mx-auto mt-20 grid grid-cols-2 md:grid-cols-4 gap-4">

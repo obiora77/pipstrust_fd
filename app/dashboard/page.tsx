@@ -37,7 +37,7 @@ export default function DashboardPage() {
       {/* Greeting */}
       <div className="mb-8">
         <h1 className="text-2xl font-display font-bold text-white">
-          Good day, {user?.first_name} 👋
+          Good day, {user?.first_name}
         </h1>
         <p className="text-dark-400 text-sm mt-1">Here's your investment overview</p>
       </div>

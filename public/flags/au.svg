@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 24" role="img" aria-label="Australia flag">
+  <rect width="32" height="24" fill="#00247d"/>
+  <polygon points="0,0 14,0 6,12" fill="#fff"/>
+  <polygon points="0,0 10,0 0,8" fill="#cf142b"/>
+  <polygon points="0,12 14,12 6,0" fill="#fff"/>
+  <polygon points="0,12 10,12 0,4" fill="#cf142b"/>
+  <circle cx="24" cy="16" r="3" fill="#fff"/>
+  <polygon points="24,13 25,17 21,15 27,15 23,17" fill="#cf142b"/>
+</svg>

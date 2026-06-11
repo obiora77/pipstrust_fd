@@ -47,13 +47,12 @@ export default function NavBar() {
 
         <div className="hidden md:flex items-center gap-8 text-sm">
           <Link href="/" className={linkClass('/')}>Home</Link>
+          <Link href="/licenses" className={linkClass('/licenses')}>License</Link>
           <Link href="/about" className={linkClass('/about')}>About</Link>
           <Link href="/plans" className={linkClass('/plans')}>
             Investments Plans
           </Link>
-          <a href="#features" className="hover:text-gold-400 transition-colors text-dark-300">
-            Features
-          </a>
+          <Link href="/features" className={linkClass('/features')}>Features</Link>
           <Link href="/faq" className={linkClass('/faq')}>
             FAQ
           </Link>
@@ -78,6 +77,9 @@ export default function NavBar() {
           <div className="px-6 py-4 space-y-3 text-sm text-dark-300">
             <Link href="/" onClick={() => setIsOpen(false)} className="block hover:text-gold-400 transition-colors">
               Home
+            </Link>
+            <Link href="/licenses" onClick={() => setIsOpen(false)} className="block hover:text-gold-400 transition-colors">
+              License
             </Link>
             <Link href="/about" onClick={() => setIsOpen(false)} className="block hover:text-gold-400 transition-colors">
               About

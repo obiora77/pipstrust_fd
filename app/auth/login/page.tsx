@@ -40,7 +40,9 @@ export default function LoginPage() {
       const errData = err?.response?.data
       if (errData?.errors?.requires_verification) {
         toast.error('Please verify your email first.')
-        router.push(`/auth/verify-email?email=${errData.errors.email}`)
+        router.push(`/auth/verify-email?email=${encodeURIComponent(errData.errors.email)}`)
+      } else if (errData?.message) {
+        toast.error(errData.message)
       }
     } finally {
       setLoading(false)

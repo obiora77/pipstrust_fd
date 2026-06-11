@@ -11,14 +11,17 @@ import {
 
 export default function FAQ() {
    return (
-      <div className="container py-20 bg-dark-950 text-white">
+      <div className="min-h-screen bg-dark-950 text-white">
          <NavBar />
-         <div className="mx-auto max-w-2xl">
-            <section className="mt-16">
-               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(34,197,94,0.12),_transparent_45%)]" />
-               <h2 className="mb-6 text-2xl font-bold">Frequently Asked Questions</h2>
-               <p className="mt-2 text-lg text-slate-600">Find answers to common questions about PipsTrust</p>
-               <Accordion type="single" collapsible>
+         <div className="mx-auto max-w-3xl px-6 py-20">
+            <section className="relative overflow-hidden rounded-3xl border border-white/10 bg-slate-950/90 p-8 shadow-xl shadow-black/30">
+               <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(34,197,94,0.12),_transparent_45%)]" />
+               <div className="relative space-y-6">
+                  <div>
+                     <h2 className="mb-3 text-3xl font-bold">Frequently Asked Questions</h2>
+                     <p className="text-lg text-slate-400">Find answers to common questions about PipsTrust.</p>
+                  </div>
+                  <Accordion type="single" collapsible className="space-y-3">
                   <AccordionItem value="q1">
                      <AccordionTrigger>How do I open an account?</AccordionTrigger>
                      <AccordionContent>
@@ -74,6 +77,7 @@ export default function FAQ() {
                      </AccordionContent>
                   </AccordionItem>
                </Accordion>
+               </div>
             </section>
          </div>
          <Footer />
