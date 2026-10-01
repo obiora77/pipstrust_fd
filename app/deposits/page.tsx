@@ -9,14 +9,16 @@ import { ArrowDownToLine, Loader2, X, Upload, Copy } from 'lucide-react'
 
 const WALLET_ADDRESSES: Record<string, { address: string; network: string }> = {
   bitcoin:  { address: 'bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh', network: 'Bitcoin Network' },
-  ethereum: { address: '0x71C7656EC7ab88b098defB751B7401B5f6d8976F', network: 'ERC-20' },
-  usdt:     { address: 'TN3W4H6rK2ce4vX9YnFQHwKx6Le9XszaUk', network: 'TRC-20' },
+  ethereum: { address: '0x71C7656EC7ab88b098defB751B7401B5f6d8976F', network: 'ERC20' },
+  usdt:     { address: 'TN3W4H6rK2ce4vX9YnFQHwKx6Le9XszaUk', network: 'TRC20' },
+  usdt2:     { address: 'TN3W4H6rK2ce4vX9YnFQHwKx6Le9XszaUk', network: 'ETH20' },
 }
 
 const METHODS = [
   { value: 'bitcoin', label: 'Bitcoin (BTC)' },
   { value: 'ethereum', label: 'Ethereum (ETH)' },
-  { value: 'usdt', label: 'USDT (TRC-20)' },
+  { value: 'usdt', label: 'USDT (TRC20)' },
+  { value: 'usdt2', label: 'USDT (ETH20)' },
 ]
 
 export default function DepositsPage() {

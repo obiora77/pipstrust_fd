@@ -4,8 +4,7 @@ import Image from "next/image"
 import { useState } from "react"
 import NavBar from "@/components/layout/NavBar"
 import Footer from "@/components/layout/Footer"
-import { licenses } from "@/constants"
-import { countryLogos } from "@/constants"
+import { licenses, countryLogos } from "@/constants"
 
 const PER_PAGE = 9;
 

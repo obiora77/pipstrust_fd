@@ -24,9 +24,6 @@ export default function ProfilePage() {
     bitcoin_address: me?.profile?.bitcoin_address || '',
     ethereum_address: me?.profile?.ethereum_address || '',
     usdt_address: me?.profile?.usdt_address || '',
-    bank_name: me?.profile?.bank_name || '',
-    bank_account_number: me?.profile?.bank_account_number || '',
-    bank_account_name: me?.profile?.bank_account_name || '',
   }})
   const passwordForm = useForm<{ old_password: string; new_password: string; new_password2: string }>()
 
@@ -141,7 +138,7 @@ export default function ProfilePage() {
                 <input {...walletForm.register(field as any)} placeholder={placeholder} className="input-gold w-full font-mono text-sm" />
               </div>
             ))}
-            <div className="pt-2 border-t border-dark-700 space-y-4">
+            {/* <div className="pt-2 border-t border-dark-700 space-y-4">
               <p className="text-sm font-medium text-dark-300">Bank Transfer Details</p>
               {[
                 { field: 'bank_name',           label: 'Bank Name',           placeholder: 'Access Bank' },
@@ -153,7 +150,7 @@ export default function ProfilePage() {
                   <input {...walletForm.register(field as any)} placeholder={placeholder} className="input-gold w-full" />
                 </div>
               ))}
-            </div>
+            </div> */}
             <button type="submit" disabled={walletMutation.isPending}
               className="bg-gold-gradient text-dark-950 font-bold px-6 py-2.5 rounded-xl hover:opacity-90 transition-all flex items-center gap-2 disabled:opacity-60">
               {walletMutation.isPending ? <Loader2 size={16} className="animate-spin" /> : 'Save Addresses'}
